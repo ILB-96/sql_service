@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "sql-service"
+version = "0.1.0"
+description = "SQL operations injection for data access object"
+authors = ["Israel Barmack <israel.bar.dev@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+sqlalchemy = "^2.0.32"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6.3"
+mypy = "^1.11.2"
+bandit = "^1.7.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
