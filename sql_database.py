@@ -77,7 +77,7 @@ class SQLDatabase:
 
     def drop_table(self, model):
         try:
-            self.executors.drop_table(model)
+            self.executors.drop_table(model, self.engine)
         except Exception as exc:
-            log_exception("drop_table", model.__tablename__)
+            log_exception("drop_table", "all rows", model.__tablename__)
             raise exc

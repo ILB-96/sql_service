@@ -53,8 +53,8 @@ class Executors:
         except Exception as exc:
             raise exc
 
-    def drop_table(self, model):
+    def drop_table(self, model, engine):
         try:
-            model.__table__.drop()
+            model.__table__.drop(engine)
         except Exception as exc:
             raise exc
